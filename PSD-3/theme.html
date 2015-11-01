@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/slicknav.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+		<!---Stikey Menu -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="nc.css">
+        <link rel="stylesheet" href="responsive.css">
+        <link href="css/select2.css" rel="stylesheet"/>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+		    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+		<!---Stikey Menu<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> --> 
+		<script type="text/javascript" src="js/jssor.js"></script>
+		<script type="text/javascript" src="js/jssor.slider.js"></script>
+		<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
+    </head>
+    <body style="padding: 0; margin: 0; font-family:Arial, Verdana;background-color:#fff;">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		<script>
+
+        jQuery(document).ready(function ($) {
+
+            var _SlideshowTransitions = [
+            //Fade in L
+                {$Duration: 1200, x: 0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out R
+                , { $Duration: 1200, x: -0.3, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade in R
+                , { $Duration: 1200, x: -0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out L
+                , { $Duration: 1200, x: 0.3, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in T
+                , { $Duration: 1200, y: 0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out B
+                , { $Duration: 1200, y: -0.3, $SlideOut: true, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade in B
+                , { $Duration: 1200, y: -0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out T
+                , { $Duration: 1200, y: 0.3, $SlideOut: true, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in LR
+                , { $Duration: 1200, x: 0.3, $Cols: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Column: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out LR
+                , { $Duration: 1200, x: 0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade in TB
+                , { $Duration: 1200, y: 0.3, $Rows: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Row: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade out TB
+                , { $Duration: 1200, y: 0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in LR Chess
+                , { $Duration: 1200, y: 0.3, $Cols: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out LR Chess
+                , { $Duration: 1200, y: -0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade in TB Chess
+                , { $Duration: 1200, x: 0.3, $Rows: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out TB Chess
+                , { $Duration: 1200, x: -0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+
+            //Fade in Corners
+                , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            //Fade out Corners
+                , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+
+            //Fade Clip in H
+                , { $Duration: 1200, $Delay: 20, $Clip: 3, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade Clip out H
+                , { $Duration: 1200, $Delay: 20, $Clip: 3, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade Clip in V
+                , { $Duration: 1200, $Delay: 20, $Clip: 12, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            //Fade Clip out V
+                , { $Duration: 1200, $Delay: 20, $Clip: 12, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+                ];
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlayInterval: 1500,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                                //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideDuration: 800,                                //Specifies default duration (swipe) for slide in milliseconds
+
+                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                },
+
+                $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 1                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                },
+
+                $ThumbnailNavigatorOptions: {                       //[Optional] Options to specify and enable thumbnail navigator or not
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                    $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+                    $SpacingX: 8,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                    $DisplayPieces: 10,                             //[Optional] Number of pieces to display, default value is 1
+                    $ParkingPosition: 360                          //[Optional] The offset position to park thumbnail
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider1.$ScaleWidth(Math.max(Math.min(parentWidth, 1200), 300));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+
+            ScaleSlider();
+
+            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+                $(window).bind('resize', ScaleSlider);
+            }
+
+
+            //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
+            //    $(window).bind("orientationchange", ScaleSlider);
+            //}
+            //responsive code end
+        });
+    </script>
+    <!-- Jssor Slider Begin -->
+
+        <!-- start contant -->
+		<div class="abc">
+		<div class="head_area">
+		<div class="bgh">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="logo">
+							<a class="logo" href="index.html"><h2>Mauritius Villas</h2></a>
+						</div>
+					</div>
+					<div class="col-md-6">
+					<div class="contract">
+					<address>
+						<h4>(230) 5 791-6225</h4>
+						<p>call for villa booking or advice</p>
+					</address>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="menu_area borderBottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="main_menu">
+							<ul id="nav">
+								<li><a href="index.html">Destinations</a>
+									<ul class="sub-menu">
+										<li><a href="theme.html">Sub Menu 1</a></li>
+										<li><a href="theme.html">Sub Menu 2</a></li>
+										<li><a href="theme.html">Sub Menu 3</a></li>
+										<li><a href="theme.html">Sub Menu 4</a></li>
+									</ul>
+								</li>
+								<li><a href="theme.html">Themes</a>
+									<ul class="sub-menu">
+										<li><a href="">Sub Menu 1</a></li>
+										<li><a href="">Sub Menu 2</a></li>
+										<li><a href="">Sub Menu 3</a></li>
+										<li><a href="">Sub Menu 4</a></li>
+									</ul>
+								</li>
+								<li><a href="listing.html">Specials</a></li>
+								<li><a href="listing.html">Resources</a>
+									<ul class="sub-menu">
+										<li><a href="listing.html">Sub Menu 1</a></li>
+										<li><a href="listing.html">Sub Menu 2</a></li>
+										<li><a href="listing.html">Sub Menu 3</a></li>
+										<li><a href="listing.html">Sub Menu 4</a></li>
+									</ul>
+								</li>
+								<li><a href="signup.html"> Contact Us</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	
+		
+		<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="head_titale2">
+								<h2>Athena villas mauritius</h2>
+								<p>Villas with private pool is Mauritius</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+				<div class="slider_area">	
+				 <!-- You can move inline styles to css file or css block. -->
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 800px;
+        height: 456px; background: #; overflow: hidden; ">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 356px; overflow: hidden;">
+            <div>
+                <img u="image" src="images/2.jpg" />
+                <img u="thumb" src="images/9.0x100.jpg" />
+            </div>
+            <div>
+                <img u="image" src="images/3.jpg" />
+                <img u="thumb" src="images/3.685x443.jpg" />
+            </div>
+            <div>
+                <img u="image" src="images/4.jpg" />
+                <img u="thumb" src="images/4.0x100.jpg" />
+            </div>
+            <div>
+                <img u="image" src="images/5.jpg" />
+                <img u="thumb" src="images/5.0x100.jpg" />
+            </div>
+            <div>
+                <img u="image" src="images/19.jpg" />
+                <img u="thumb" src="images/19.0x100.jpg" />
+            </div>
+            <div>
+                <img u="image" src="images/7.jpg" />
+                <img u="thumb" src="images/7.0x100.jpg" />
+            </div>
+            <div>
+                <img u="image" src="images/8.jpg" />
+                <img u="thumb" src="images/8.0x100.jpg" />
+            </div>
+            <div>
+                <img u="image" src="images/9.jpg" />
+                <img u="thumb" src="images/9.0x100.jpg" />
+            </div>
+            <div>
+                <img u="image" src="images/10.jpg" />
+                <img u="thumb" src="images/10.0x100.jpg" />
+            </div>
+            <div>
+                <img u="image" src="images/11.jpg" />
+                <img u="thumb" src="images/11.0x100.jpg" />
+            </div>
+            
+            <div>
+                <img u="image" src="images/12.jpg" />
+                <img u="thumb" src="images/12.0x100.jpg" />
+            </div>
+            <div>
+                <img u="image" src="images/13.jpg" />
+                <img u="thumb" src="images/13.0x100.jpg" />
+            </div>
+        </div>
+        
+        <!-- Arrow Navigator Skin Begin -->
+        <style>
+            /* jssor slider arrow navigator skin 05 css */
+            /*
+            .jssora05l              (normal)
+            .jssora05r              (normal)
+            .jssora05l:hover        (normal mouseover)
+            .jssora05r:hover        (normal mouseover)
+            .jssora05ldn            (mousedown)
+            .jssora05rdn            (mousedown)
+            */
+            .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn
+            {
+            	position: absolute;
+            	cursor: pointer;
+            	display: block;
+                background: url(img/a17.png) no-repeat;
+                overflow:hidden;
+            }
+            .jssora05l { background-position: -10px -40px; }
+            .jssora05r { background-position: -70px -40px; }
+            .jssora05l:hover { background-position: -130px -40px; }
+            .jssora05r:hover { background-position: -190px -40px; }
+            .jssora05ldn { background-position: -250px -40px; }
+            .jssora05rdn { background-position: -310px -40px; }
+        </style>
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora05l" style="width: 40px; height: 40px; top: 158px; left: 8px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora05r" style="width: 40px; height: 40px; top: 158px; right: 8px">
+        </span>
+        <!-- Arrow Navigator Skin End -->
+        
+        <!-- Thumbnail Navigator Skin Begin -->
+        <div u="thumbnavigator" class="jssort01" style="position: absolute; width: 800px; height: 100px; left:0px; bottom: 0px; margin-top: 0px; border:1px solid #EEEEEE;">
+            <!-- Thumbnail Item Skin Begin -->
+            <style>
+                /* jssor slider thumbnail navigator skin 01 css */
+                /*
+                .jssort01 .p           (normal)
+                .jssort01 .p:hover     (normal mouseover)
+                .jssort01 .pav           (active)
+                .jssort01 .pav:hover     (active mouseover)
+                .jssort01 .pdn           (mousedown)
+                */
+                .jssort01 .w {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .jssort01 .c {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 68px;
+                    height: 68px;
+                    border: #000 0px solid;
+                }
+
+                .jssort01 .p:hover .c, .jssort01 .pav:hover .c, .jssort01 .pav .c {
+                    background: url(img/t01.png) center center;
+                    border-width: 0px;
+                    top: 2px;
+                    left: 2px;
+                    width: 68px;
+                    height: 68px;
+                }
+
+                .jssort01 .p:hover .c, .jssort01 .pav:hover .c {
+                    top: 0px;
+                    left: 0px;
+                    width: 70px;
+                    height: 70px;
+                    border: #fff 1px solid;
+                }
+            </style>
+            <div u="slides" style="cursor: move;">
+                <div u="prototype" class="p" style="position: absolute; width: 72px; height: 72px; top: 0; left: 0;">
+                    <div class=w><thumbnailtemplate style=" width: 100%; height: 100%; border: none;position:absolute; top: 0; left: 0;"></thumbnailtemplate></div>
+                    <div class=c>
+                    </div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- Thumbnail Navigator Skin End -->
+        <a style="display: none" href="http://www.jssor.com">javascript</a>
+    </div>
+    <!-- Jssor Slider End -->
+						
+					
+				
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<div class="main_contains_area">
+		<div class="container">
+			<div class="row">
+			<div class="col-md-4">
+				<div class="left_contain">
+					<div class="reservation">
+						<div class="head_txt">
+							<h2>Reservation</h2>
+						</div>
+						<div class="others_txt">
+							<h3>Why Athena villas</h3>
+							<ul>
+								<li>Top class experience!</li>
+								<li>Beautiful modern style decoration</li>
+								<li>Amazing villa with private pool</li>
+								<li>Secure and quiet area</li>
+								<li>5 minutes to Grand Boy</li>
+								<li>Top class experience!</li>
+								<li>Beautiful modern style decoration</li>
+								<li>Amazing villa with private pool</li>
+								<li>Secure and quiet area</li>
+								<li>5 minutes to Grand Boy</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8">
+			<div class="right_contain">
+				<ul class="nav nav-tabs" role="tablist">
+				  <li class="active"><a href="#Overview" role="tab" data-toggle="tab"><i class='fa fa-picture-o'></i>Overview</a></li>
+				  <li><a href="#Information" role="tab" data-toggle="tab"><i class='fa fa-info'></i>Information</a></li>
+				  <li><a href="#Rates" role="tab" data-toggle="tab"><i class='fa fa-dollar'></i>Rates</a></li>
+				  <li><a href="#Map" role="tab" data-toggle="tab"><i class='fa fa-map-marker'></i>Map</a></li>
+				  <li><a href="#Reviews" role="tab" data-toggle="tab"><i class='fa fa-comments'></i>Reviews</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content bg_area">
+				  <div class="tab-pane active" id="Overview">
+				  <h2> Overview</h2>
+					<p>
+					Built by an award-winning developer, Beaches Edge East and West are two sleek and stylish, oceanfront 5 bedroom/5.5 bath sister villas.
+					</p>
+					Each of the chic, 7,000 square foot, contemporary single villas can be rented individually, or together as an exclusive, private retreat to accommodate larger parties. Both villas are fully air conditioned, and are just a short 2-minute walk down a path to a secluded stretch of sandy beach on beautiful Pelican Bay.
+					</p>
+					<p>
+					These stylish island escapes provide a revitalizing, sensory experience of sun, sand and sea. Almost identical in layout, but with slight design nuances that make them still one-of-a-kind, the spacious modern homes use floor-to-ceiling glass windows and doors to bring the stunning azure water views and lush gardens indoors.
+					</p>
+					<p>
+					Upstairs are two identical master suites on each end with two guest suites in the middle. All have huge glass windows to enjoy the view. The fifth bedroom is located on the main floor.
+					</p>
+					<p>
+					Combined, the villas can sleep over 20 people comfortably, and with double the amenities and over 14,000 square feet of beautiful indoor and outdoor space, are perfect for extended family gatherings, getaways with friends, birthday and anniversary celebrations, wedding parties and ceremonies, reunions and corporate retreats
+					</p>				  
+				 
+				  </div>
+				  <div class="tab-pane information" id="Information">
+					
+					<h2>Bedroom Details</h2>
+					<ul>
+						<li>Each villa has 5 bedrooms - 3 with Kings and 2 with Queens</li>
+					</ul>
+					<h2>Bedroom Details</h2>
+					<ul>
+						<li>12 Bathrooms ( 4 Ensuite, 1 Half Bath and 1 Pool Bath in Each Villa)</li>
+					</ul>
+
+					<h2>Amenities</h2>
+					<ul>
+						<li>Private entry court with lush landscaping</li>
+						<li>Reflecting fountain and Navona honed</li>
+						<li>Travertine stepping-stone bridge</li>
+						<li>Covered dining pavilion off kitchen with built-in barbecue grill by Viking</li>
+						<li> Two-car carport</li>
+						<li>Kabukali wood accent walls</li>
+						<li>Bamboo walls on second floor</li>
+						<li>Travertine stone flooring throughout</li>
+						<li>Flat-panel interior doors with brushed chrome door levers and hardware</li>
+						<li>Recessed downlighting and wall-wash lighting; ceiling mount fixtures</li>
+						<li>Premium kitchen appliances</li>
+						<li>Avonite countertops</li>
+						<li> Flat-panel, white lacquer cabinet system</li>
+						<li>Kohler under-mounted, stainless steel, double-bowl sink</li>
+						<li>Premium Vola faucet</li>
+						<li> First-floor media room with sliding door</li>
+						<li>High-speed internet/phone/television</li>
+					</ul>
+					<h2>Bedroom Details</h2>
+					<ul>
+						<li>Footpath to quiet beach</li>
+					</ul>
+					<h2>Pool Details</h2>
+					<ul>
+						<li>Bi-level pool and spa tub</li>
+						<li> Pool bath with beach shower</li>
+					</ul>
+					<h2>Staff and Services</h2>
+					<ul>
+						<li> Concierge</li>
+						<li>Daily housekeeping </li>
+					</ul>
+					<h2>Staff and Services (at additional cost)</h2>
+					<ul>
+						<li>Chef</li>
+						<li>  Spa services</li>
+						<li>Wedding / event packages </li>
+					</ul>
+					<h2>Villa Notes</h2>
+					<ul>
+						<li>Each villa over 4,400 square feet - interior space</li>
+					</ul>
+
+				  </div>
+				  <div class="tab-pane" id="Rates">Recents Events 3</div>
+				  <div class="tab-pane" id="Map">
+					  <div  class='google-map'>
+						<script type='text/javascript' src='js/MarkupGoogleMap.js'></script><div id='mgmap1' class='MarkupGoogleMap' style='width: 100%; height: 440px;'></div><script type='text/javascript'>if(typeof google === 'undefined' || typeof google.maps === 'undefined') { alert('MarkupGoogleMap Error: Please add the maps.googleapis.com script in your document head.'); } else { var mgmap1 = new MarkupGoogleMap(); mgmap1.setOption('zoom', 12); mgmap1.setOption('mapTypeId', google.maps.MapTypeId.ROADMAP); mgmap1.setIcon('img/map-marker.png'); mgmap1.setHoverBox('<div data-top="-10" data-left="15" style="background: #000; color: #fff; padding: 0.25em 0.5em; border-radius: 3px;"></div>');mgmap1.init('mgmap1', 18.172831, -63.086800); mgmap1.addMarker(18.172831, -63.086800, 'index.html', 'Beaches Edge Villas<br /><small class=disclaimer>approximate location</small>', ''); }</script>
+					 </div>			  
+				  </div>
+				  <div class="tab-pane reviews" id="Reviews">
+					
+					<div  class='tab'>
+					<h2>Beaches Edge Villas Reviews</h2>
+					<p>There are currently no reviews.</p>
+					<div class="from_area">
+					<h2>Post Your Review</h2>
+					<form  action='#' method='post'>
+					<p>
+					<label >Your Name</label>
+					<input type='text' name='cite' class='required' required='required'  value='' maxlength='128' />
+					</p>
+					<p >
+					<label >Your E-Mail</label>
+					<input type='text' name='email' class='required email' required='required' id='CommentForm_email' value='' maxlength='255' />
+					</p>
+					<p >
+					<label >Comments</label>
+					<textarea name='text' class='required' required='required' id='CommentForm_text'></textarea>
+					</p>
+					<p >
+					<input type='submit' name='CommentForm_submit' value='Send'></button>
+					
+					</p>
+					</form>
+				</div>
+		<!--/CommentForm-->
+	</div>
+
+				  
+				  
+				  
+				  </div>
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		
+		<div class="main_private_area scrollto">
+			
+			<div class="container">
+				<div class="row">
+                    <div class="find_area_private">
+                        <div class="col-md-12">
+                            <h2>Find your Villa / apartment</h2>
+                        </div>
+                        <div class="col-md-4 topfix">
+                            <select id="e7" style="width: 100%;">
+                                  <option value="volvo">Volvo</option>
+                                  <option value="saab">Saab</option>
+                                  <option value="vw">VW</option>
+                                  <option value="Select" selected>Select</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 topfix">
+                            <select id="e8" style="width: 100%;">
+                                  <option value="volvo">Volvo</option>
+                                  <option value="saab">Saab</option>
+                                  <option value="vw">VW</option>
+                                  <option value="Select" selected>Select</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 topfix">
+                            <select id="e9" style="width: 100%;">
+                                  <option value="volvo">Volvo</option>
+                                  <option value="saab">Saab</option>
+                                  <option value="vw">VW</option>
+                                  <option value="Select" selected>Select</option>
+                            </select>
+                        </div> 
+                        <input type="submit" value="Search" />
+                    </div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_area">
+			<div class="container">
+			<div class="bottom_line">
+				<div class="row">
+					<div class="footer_menu">
+					<div class="col-md-4">
+						<h2>Get more <span>From Mauritius villas</span></h2>
+					</div>
+					<div class="col-md-8">
+						<ul>
+							<li><a href="">Home</a></li>
+							<li><a href="">Contact us</a></li>
+							<li><a href="">Special Offiers</a></li>
+							<li><a href="">Testimonials</a></li>
+							<li><a href="">Sitemap</a></li>
+							<li><a href="">Terms & Conditions</a></li>
+							<li><a href="">privacy Policy</a></li>
+						</ul>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<h5>Let's Socialize</h5>
+						<p>Follow us:</p>
+						<div class="socil">
+						<a href="">
+							<i class="fa fa-facebook"></i>
+						</a>
+						</div>
+						<div class="socil">
+						<a href="">
+							<i class="fa fa-twitter"></i>
+						</a>
+						</div>
+						<div class="socil">
+						<a href="">
+						<i class="fa fa-google-plus"></i>
+						</a>
+						</div>
+						
+					</div>
+					<div class="col-md-4">
+						<h5>Stay in the know</h5>
+						<p>Exclusive news & offers straight to your inbos:</p>
+						<div class="signup">
+						<input type="text" placeholder="Enter Email Address" />
+						<input type="submit" value="sing up" />
+						</div>
+					</div>
+					<div class="col-md-4">
+						<h5>Quick Search</h5>
+						<p>Know which villa you want to go to?</p>
+						<div class="searching">
+						<input type="text"  /> <i class="fa fa-search"> </i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>Copyright &copy 2014. All right reserved.4.3.0.0 </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+        <!-- end contant -->
+		 <!-- FlexSlider -->
+  
+		
+    
+        <script src="js/plugins.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.slicknav.min.js"></script>
+        <script src="js/jquery.fitvids.js"></script>
+		<!---Stikey Menu -->
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/jquery.stickyNavbar.min.js"></script>
+		<!---Stikey Menu -->
+		
+		<script defer src="js/jquery.flexslider.js"></script>
+		  <script type="text/javascript">
+			$(window).load(function() {
+			  // The slider being synced must be initialized first
+			  $('#carousel').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: true,
+				slideshow: true,
+				autoplay:true,
+				itemWidth: 210,
+				itemMargin: 5,
+				asNavFor: '#slider'
+			  });
+			 
+			  $('#slider').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: true,
+				slideshow: true,
+				autoplay:true,
+				sync: "#carousel"
+			  });
+			});
+		  </script>
+		   
+
+        <script src="js/main.js"></script>
+        <script src="js/select2.js"></script> 
+         <script>
+         
+            $(document).ready(function() { $("#e1").select2(); });
+            $(document).ready(function() { $("#e2").select2(); });
+            $(document).ready(function() { $("#e3").select2(); });
+         
+            $(document).ready(function() { $("#e4").select2(); });
+            $(document).ready(function() { $("#e5").select2(); });
+            $(document).ready(function() { $("#e6").select2(); });
+         
+            $(document).ready(function() { $("#e7").select2(); });
+            $(document).ready(function() { $("#e8").select2(); });
+            $(document).ready(function() { $("#e9").select2(); });
+            
+            
+            
+ 
+
+        </script>   
+    
+       
+    </body>
+</html>

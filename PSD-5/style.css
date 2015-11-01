@@ -1,0 +1,443 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+body {font-family: 'Roboto Condensed', sans-serif; margin: 0 audio;}
+.slicknav_menu {display:none; padding-bottom:10px}
+img {max-width:100%;height:auto}
+a:hover, a:focus {outline:none; text-decoration:none; border:none;}
+.fix {overflow:hidden}
+.floatleft {float:left} 
+.floatright {float:right}
+.header_area{height:100px; width:100%}
+#scroll.header_area .container{margin:0 auto; padding:0; width:100%; text-align:center}
+
+
+
+/* Animations menu  */
+.slow_motion{ 
+			/* Translate -100% to move off screen */
+		-webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+
+    /* Animations */
+			-webkit-transition: all 400ms ease-in-out;
+			-moz-transition: all 400ms ease-in-out;
+            transition: all 400ms ease-in-out;
+		}
+.header_area.slow_motion.stick{
+-webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+
+}
+
+		
+.container{}
+.bg_red{background-color:#FF5959}
+
+.bg_white{background-color:#E8E8E8;}
+.container .row{margin:0;  padding:0px}
+.header_area .container .row .logo { padding:10px}
+.logo{ padding:0px}
+.logo img{float: left;padding-left: 12px;padding-top: 10px;text-align: center; }
+.logo h2{color: #fff;font-size: 34px;left: 0px;margin: 0;float: left;padding-left: 10px;width: 82%;text-align: left;
+margin-bottom: 4px;}
+.logo p{color: #fff;float: left;font-size: 14px;margin: 0 0 0 15px;}
+.maim_menu { padding-top:20px}
+.maim_menu ul#nav{ list-style:none; }
+.maim_menu ul#nav li{display: inline-block;height: 28px;padding-top: 0px;text-align: center;width: 85px;}
+.maim_menu ul#nav li a{ font-size:17px; color:#fff; }
+.maim_menu ul#nav li:hover{background-color: #fc7d7d;border-radius: 5px;}
+.maim_menu ul#nav li.current{background-color: #fc7d7d;border-radius: 5px;}
+.slider_area {margin: 0 auto;width:100%; border-bottom:1px solid #ff5959;}
+.slider_area img{width:100%}
+.service_area{}
+.single_header { height: 105px;margin-bottom: 25px;width: 100%; position:relative;}
+.single_header h2{ color: #000000;font-size: 30px;padding-top: 24px;text-align: center;}
+.single_header:before{ border: 1px solid #8B8B8B;bottom: 0;content: "";left: 50%;margin-left: -200px;position: absolute;width: 400px; }
+.single_header:after{background: none repeat scroll 0 0 #000;border-left: 45px solid #e8e8e8;border-radius: 50%;border-right: 45px solid #e8e8e8;bottom: -4px;content: "";height: 10px;left: 50%;margin-left: -50px;position: absolute;text-align: center;width: 100px; }
+.single_header.bk_red h2{ color: #fff;font-size: 30px;padding-top: 24px;text-align: center;}
+.single_header.bk_red:before{ border: 1px solid #FFFFFF;bottom: 0;content: "";left: 50%;margin-left: -200px;position: absolute;width: 400px; }
+.single_header.bk_red:after{background: none repeat scroll 0 0 #ffffff;border-left: 45px solid #ff5959;border-radius: 50%;border-right: 45px solid #ff5959;bottom: -4px;content: "";height: 10px;left: 50%;margin-left: -50px;position: absolute;text-align: center;width: 100px;}
+.single_service_area{height: auto;margin-bottom: 100px;margin-top: 60px;overflow: hidden;width: 100%;}
+.single_service{ text-align:center;}
+.single_service_area .col-md-4:nth-child(4) { display: none;}
+
+.single_service img{ background-color: #e8e8e8;border-radius: 50%;height: 135px;width: 135px;}
+.single_service h3{ font-size:24px;color:#000000;}
+.single_service p{ font-size:13px;color:#000000;}
+.portfolio_head_area{}
+.portfolio_area{position:relative; z-index:99}
+.paralax_area{position:relative;text-align:center; background:url(img/per.jpg) no-repeat fixed; background-size:cover;}
+.parallax_opacity{background-color:#FF5959;position:absolute;height:100%; width:100%; opacity:.3}
+
+.two_img{}
+.progest_big{margin-bottom: 70px;margin-top: 60px;text-align: center; height: auto;position: relative;width: 100%; }
+.progest_big img{}
+
+.four_img{margin-bottom: 40px;text-align: center;position: relative;;}
+.team_area.bg_white{text-align:center;padding-top:30px; padding-bottom:30px }
+.team_area_contain {width: 100%;text-align:center;}
+.single_team{margin-top: 20px;}
+.single_team img{ background-color: #ffffff;border: 1px solid #ff5959;border-radius: 50%;height: 200px;width: 200px;}
+.single_team h3{color: #000000;font-size: 24px;margin: 10px 0 0;}
+.single_team span{color: #000000;font-size: 16px;margin: 10px 0 0;}
+.single_team p{color: #000000;font-size: 16px;margin: 10px 0 0;}
+.single_team .social{height: 40px;width: 100%;  margin-top: 10px;}
+.single_team .social i{color: #fff; border-radius: 50%;font-size: 20px;height: 30px;margin-left: 10px;width: 30px;padding-top: 5px;text-align: center;}
+.single_team .social .fa-twitter{ background-color:#79CDF1}
+.single_team .social .fa-pinterest{ background-color:#EB5756}
+.single_team .social .fa-facebook{ background-color:#547BBE}
+.single_team .social .fa-google-plus{ background-color:#4C4C4C}
+.single_team .social .fa-linkedin{ background-color:#1385C8}
+.single_team .social .fa-twitter:hover{ background-color:#7FBA00}
+.single_team .social .fa-pinterest:hover{ background-color:#7FBA00}
+.single_team .social .fa-facebook:hover{ background-color:#7FBA00}
+.single_team .social .fa-google-plus:hover{ background-color:#7FBA00}
+.single_team .social .fa-linkedin:hover{ background-color:#7FBA00}
+.social{}
+.news_area{}
+.latest_news_area{width:100%}
+.latest_news_area .col-md-4:nth-child(4) { display: none;}
+.single_latest_news{color: #fff;margin-bottom: 60px;margin-top: 30px;}
+.single_latest_news img{}
+.single_latest_news h4{ font-size: 18px;}
+.single_latest_news span{ font-size: 13px;}
+.single_latest_news p{ font-size: 13px;}
+.single_latest_news .comment_area p i {margin-right: 15px;}
+.single_latest_news .comment_area span{font-size: 13px;margin-left: 20%;}
+.comment_area{}
+.contact_area{}
+.form_area {margin-bottom: 40px;text-align: center;}
+.form_area form{}
+.form_area form input{}
+.form_area form input[type='text']{ border: 0 none;border-radius: 8px;height: 35px;margin-bottom: 10px;margin-top: 10px;padding-left: 15px;width: 100%;}
+.contact_info input[type='submit']{background-color: #ff5959;border: 0 none;border-radius: 8px;float: left;height: 38px;margin-bottom: 10px;margin-top: 20px;padding: 8px 15px;text-transform: uppercase;}
+.form_area form textarea{ border: 0 none;border-radius: 8px;padding-left: 12px;width: 100%;padding-top: 10px;}
+.submit_batton_Desktop{display:block;}
+.submit_batton_others{display:none;}
+.submit_batton_others input[type='submit']{background-color: #ff5959;border: 0 none;border-radius: 8px;float: left;height: 38px;margin-bottom: 10px;margin-top: 20px;padding: 8px 15px;text-transform: uppercase;}
+.contact_info{font-size:13px; overflow:hidden}
+.contact_info h2{font-size:24px;}
+.contact_info p{}
+.contact_info i{margin-right:10px}
+.map_batton_s{border: 1px solid #ff5959;border-radius: 6px;font-size: 18px;height: 34px;margin-left: 38%;margin-top: 42px;padding: 4px 10px;text-align: center;text-transform: uppercase;width: 100px;}
+.map_batton_h{border: 1px solid #ff5959;border-radius: 6px;font-size: 18px;height: 34px;margin-left: 38%;margin-top: 42px;padding: 4px 10px;text-align: center;text-transform: uppercase;width: 100px;display:none}
+.map_batton_s.h{display:none}
+.map_batton_h.h{display:block}
+.map_area.hide{display:none}
+.map_area.show {border: 1px solid #ff5959;display: block; margin: 20px 0px;}
+.footer_area .container { margin: 0; padding: 0; height: 70px;}
+.footer_area p{text-align:center; font-size:13px; height:30px; width:100%;margin-top:30px}
+#scrollUp{background-color: green;border-radius: 50%;bottom: 20px;color: #fff;display: block;font-size: 18px;height: 30px;position: fixed;right: 20px;text-align: center;width: 30px;}
+
+.project_datial{ position:absolute; text-align:center;height:100%; width:100%; top:0;left:0; display:none;}
+.progest_big:hover .project_datial{display:block;}
+.four_img:hover .project_datial{display:block;}
+.project_datial a{background-color: #db4aa1;color: #fff;display: inline-block;font-size: 18px;height: 30px;margin-top: -15px;position: relative;top: 42%;width: 30px;z-index: 999; }
+.project_datial a:hover{color:#666}
+.project_overlay{background-color:red;position:absolute;left:0;top:0;height:100%; width:100%; opacity:.6}
+.bg_red{}

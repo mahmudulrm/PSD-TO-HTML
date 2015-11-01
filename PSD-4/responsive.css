@@ -1,0 +1,112 @@
+/* Tablet Layout */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.container {width:750px;}
+.main_menu { padding-top: 7px;  width: 100%;}
+menu, ol, ul {  padding: 0;}
+.main_menu ul#nav li a {font-size: 15px;}
+.head_titele {padding-top: 10px;}
+.see_works_title { margin-bottom: 60px; margin-top: 30px;}
+.single_what { margin-bottom: 40px;  margin-top: 25px;  padding: 0 15px;}
+.what .row .col-md-4:nth-child(4){display:block;}
+.carsal h1 {font-size: 40px;}
+.carsal p {font-size: 20px;}
+.single_carsal {padding: 0 20px;}
+}
+/* Mobile Samll Layout */
+@media only screen and (max-width: 767px) {
+.container {width:240px;}
+.slicknav_menu {display:block}
+.main_menu{display:none}
+.slicknav_menu {z-index:999; position:relative; margin-bottom:0px;padding-top:20px;  background-color: rgba(0, 0, 0, 0.9);  font-size: 19px;  height: auto;  
+ text-align: center;  top: 0;  width:100%;}
+.slicknav_menu.sticky.fadeInDown.animated{background-color: rgba(0, 0, 0, 0.4);}
+.slicknav_nav a { text-transform: uppercase;}
+.slicknav_nav a:hover { background-color:#EBE9D1;}
+ .slicknav_btn {  background-color: #9B7E3C; margin-bottom:15px;  float: none;  height: 40px;  left: 50%;  margin-left: -57px;  text-align: center;  width: 115px;}
+.slider_area h1 {font-size: 13px;  margin-left: -45px;  top: 52%;}
+.slider_area span { font-size: 22px;  margin-left: -65px;  top: 65%;}
+.head_titele {  padding-top: 6px;}
+.skill_img { padding-bottom: 35px;}
+.skill_img img {  max-height: 386px;}
+.carsal h1 {font-size: 20px;}
+.carsal p {font-size: 15px;}
+ .single_carsal {padding: 0 20px;}
+ .single_what {  margin-bottom: 20px;  margin-top: 13px;  padding: 0 18px;  }
+ .head_titele h2 {font-size: 15px;}
+ .discription p {font-size: 13px; color:#000;}
+ .single_team  .row:nth-child(2n+2) .col-xs-12{float:inherit;}
+.single_team  .row:nth-child(2n+2) .single_team_img {float:inherit;}
+.single_team  .row:nth-child(2n+2) .single_team_text {text-align:inherit;float:inherit;}
+
+.single_team_img{float: inherit;height: 200px;width: 200px;}
+.single_team_img img{ border-radius: 50%;  height: 200px;  width: 200px;}
+.single_team_text{text-align: inherit;width:100%;}
+.single_team_text h3{}
+.single_team_text span{}
+.single_team_text p{}
+.single_team_img {margin-left:0px; position: relative;}
+.logo {  display: none;}
+.see_works_title {  margin-bottom: 30px;  margin-top: 15px;}
+.see_works_title h2 { font-size: 14px;  padding-top: 16px}
+.see_works_title .see_works_shadow {height: 44px;margin-left: -81px;width: 140px;}
+.single_carsal {padding: 0;}
+.carsal{padding:20px; }
+ .owl-controls .owl-buttons .owl-prev{margin-left: 10px;}
+ .owl-controls .owl-buttons .owl-next{margin-right: 10px;}
+ .single_team_img {margin-bottom: 0px;margin-top:0px;}
+  .single_team_text {  margin-top: 20px;}
+ .single_team_text h3 {font-size: 15px;}
+ .single_team_text span {font-size: 14px;}
+ .single_social {font-size: 17px;height: 40px;margin-left: 3px;padding-top: 6px;width: 40px;}
+ 
+ 
+}
+/* Mobile Large Layout */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px;}
+.slicknav_menu {display:block;}
+.main_menu{display:none}
+.slicknav_menu {z-index:999; position:relative; margin-bottom:0px;padding-top:20px;  background-color: rgba(0, 0, 0, 0.9);  font-size: 19px;  height: auto;  
+ text-align: center;  top: 0;  width:100%;}
+.slicknav_menu.sticky.fadeInDown.animated{background-color: rgba(0, 0, 0, 0.4);}
+.slicknav_nav a { text-transform: uppercase;}
+.slicknav_nav a:hover { background-color:#EBE9D1;}
+ .slicknav_btn {  background-color: #9B7E3C; margin-bottom:15px;  float: none;  height: 40px;  left: 50%;  margin-left: -57px;  text-align: center;  width: 115px;}
+.slider_area h1 {font-size: 22px;  margin-left: -61px;  top: 42%;}
+.slider_area span { font-size: 49px;  margin-left: -119px;  top: 55%;}
+.head_titele {  padding-top: 6px;}
+.skill_img { padding-bottom: 35px;}
+.skill_img img {  max-height: 386px;}
+.carsal h1 {font-size: 20px;}
+.carsal p {font-size: 15px;}
+ .single_carsal {padding: 0 20px;}
+ .single_what {  margin-bottom: 20px;  margin-top: 13px;  padding: 0 18px;  }
+ .head_titele h2 {font-size: 25px;}
+ .discription p { font-size: 18px; color:#000;}
+ .single_team  .row:nth-child(2n+2) .col-xs-12{float:inherit;}
+.single_team  .row:nth-child(2n+2) .single_team_img {float:inherit;}
+.single_team  .row:nth-child(2n+2) .single_team_text {text-align:inherit;float:inherit;}
+
+.single_team_img{float: inherit;height: 200px;width: 200px;}
+.single_team_img img{ border-radius: 50%;  height: 200px;  width: 200px;}
+.single_team_text{text-align: inherit;width:100%;}
+.single_team_text h3{}
+.single_team_text span{}
+.single_team_text p{}
+.single_team_img { left: 50%; text-align: center; margin-left: -100px; position: relative;}
+.logo {  display: block;}
+.see_works_title {  margin-bottom: 100px;  margin-top: 70px;}
+.see_works_title h2 {font-size: 28px; padding-top: 20px;}
+.see_works_title .see_works_shadow {height: 70px;margin-left: -150px;width: 260px}
+ .carsal{padding:25px; }
+ .owl-controls .owl-buttons .owl-prev{margin-left: 10px;}
+ .owl-controls .owl-buttons .owl-next{margin-right: 10px;}
+ .single_team_img {margin-bottom: 30px;margin-top: 20px;}
+ .single_team_text {  margin-top: 54px;}
+ .single_team_text h3 {font-size: 24px;}
+ .single_team_text span {font-size: 15px;}
+ .single_social { font-size: 23px;  height: 50px;  margin-left: 10px;  padding-top: 7px;  width: 50px;}
+ 
+ 
+ }

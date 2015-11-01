@@ -1,0 +1,23 @@
+.owl-controls {left: 0;margin-top: -12px;position: absolute;top: 50%;width: 100%;}
+ .owl-controls .owl-buttons div{font-size:20px; display:inline-block; position:absolute;}
+ .owl-controls .owl-buttons .owl-prev{margin-left: 50px;position: absolute; left:0;}
+ .owl-controls .owl-buttons .owl-next{margin-right: 50px;position: absolute;right: 0;}
+ .owl-controls .owl-buttons .owl-prev i{ background-color: #b86449;
+border-radius: 50%;
+color: #fff;
+font-weight: bold;
+height: 35px;
+opacity: 0.8;
+padding-right: 4px;
+padding-top: 5px;
+width: 35px; }
+ .owl-controls .owl-buttons .owl-next i{background-color: #b86449;
+border-radius: 50%;
+color: #fff;
+font-weight: bold;
+height: 35px;
+opacity: 0.8;
+padding-right: 4px;
+padding-top: 5px;
+width: 35px;}
+

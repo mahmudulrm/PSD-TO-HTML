@@ -1,0 +1,130 @@
+/* Tablet Layout */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.container {width:750px;} 
+menu, ol, ul { padding: 0 0 0 0px;}
+.main_menu ul#nav li a {  font-size: 12px;}
+.downarrow { bottom: 12%;}
+.slidear_area h1 {font-size: 80px;}
+.slidear_area p {font-size: 15px;top: 65%;}
+.single_time_line h3 {font-size: 15px;}
+.single_time_line p {font-size: 11px;}
+.single_time_line i {font-size: 40px; margin-right: 20px;}
+.single_team { padding-bottom: 30px;}
+.service_prices_area { margin: 0;}
+.single_price { margin: 50px 0;padding: 25px 0;}
+.single_test_carsal p { font-size: 12px;}
+.single_test_carsal h3 {font-size: 14px;}
+.single_test_carsal h3 span{font-size: 12px;}
+.price .col-sm-6{width: 45%;}
+.price{height:100%height: 100%;padding: 100px 0;}
+.single_price.active{border:0px solid #F6F6F6; }
+.single_price.h{border:0px solid #F6F6F6;}
+.counter h3 {font-size: 15px;}
+.counter span {font-size: 40px;}
+.counter i {height: 90px;}
+.counter p {font-size: 36px;}
+.contact_form form input[type="text"] { margin: 20px 30px 20px 0;}
+.contact_2nd h4 {font-size: 15px;}
+.contact_2nd i {font-size: 40px;height: 70px;width: 60px;}
+.contact_2nd p {font-size: 13px;}
+.footer_area p {font-size: 13px;}
+ 
+ }
+
+
+/* Mobile Samll Layout */
+@media only screen and (max-width: 767px) {
+.container {width:240px;}
+.slicknav_menu {display:block;}
+.logo_menu {display:none}
+
+.slicknav_menu {z-index:999; position:relative; margin-bottom:0px;padding-top:20px;  background-color:#FF8B8B; font-size: 19px;  height: auto;  
+ text-align: center;  top: 0;  width:100%;}
+
+.slicknav_menu.sticky.fadeInDown.animated{background-color: rgba(0, 0, 0, 0.4);}
+.slicknav_nav a { text-transform: uppercase;}
+.slicknav_nav a:hover { background-color:#EBE9D1;}
+ .slicknav_btn {  background-color: #C69B6E; margin-bottom:15px;  float: none;  height: 40px;  left: 50%;  margin-left: -57px;  text-align: center;  width: 115px;}
+.slidear_area h1 { font-size: 30px;}
+ .slidear_area h1:before {margin-left: -40px;width: 80px;}
+ .slidear_area p {font-size: 11px;top: 62%;}
+ .single_team {margin-bottom: 10px;}
+.single_price {margin-bottom: 100px;}
+.counter i {height: 80px;}
+.contact_form form input[type="text"] { width: 100%;}
+.social_footer {margin: 0 0 40px;}
+.footer_area p {text-align: center;}
+.tiale_head h2 {font-size: 20px;margin: 22px;}
+.tiale_head p {font-size: 12px;}
+.single_time_line {float: left; width: 81%;}
+.middle_line {left: 84%;margin-left:4px;}
+.single_time_line_area:nth-child(2n+2) > .date_area h3 {margin-left: 0;}
+.date_area span {left: 84%; border: 3px solid #fff;height: 15px;margin-top: 8px;width: 15px;margin-left: -21px;}
+.date_area h3 {left: 81%;font-size: 10px;}
+.single_time_line_area:nth-child(2n+2) > .single_time_line {float: left;}
+.read_more_batton h3 {left: 40%;margin-bottom: -30%;}
+.single_time_line h3 {font-size: 10px;}
+.single_time_line p {font-size: 12px;}
+.time_line {margin-bottom: 50px;}
+.middle_line {height: 77%;margin-top: 27%;}
+.downarrow i {font-size: 15px;height: 25px;padding-top: 6px;width: 25px;}
+.downarrow {bottom: -4%;}
+.single_time_line i {font-size: 24px;margin-bottom: 37px;margin-right: 5px; padding: 5px;}
+.single_time_line p {font-size: 9px;}
+.single_time_line {padding: 4px;}
+.service h3 {font-size: 12px;}
+.counter {padding: 10px 0;}
+.contact_2nd i {font-size: 25px;height: 60px;  margin-right: 5px;  padding-top: 0; width: 25px;}
+.contact_2nd p {font-size: 13px;  margin: 0;}
+.contact_2nd h4 {font-size: 15px;margin: 10px 0;}
+
+
+}
+
+
+
+/* Mobile Large Layout */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px;}
+.slicknav_menu {display:block;background-color:#FFF;}
+.logo_menu {display:none}
+ 
+.slicknav_menu {z-index:999; position:relative; margin-bottom:0px;padding-top:20px;  background-color:#FF8B8B;  font-size: 19px;  height: auto;  
+ text-align: center;  top: 0;  width:100%;}
+.slicknav_menu.sticky.fadeInDown.animated{background-color: rgba(0, 0, 0, 0.4);}
+.slicknav_nav a { text-transform: uppercase;}
+.slicknav_nav a:hover { background-color:#EBE9D1;}
+ .slicknav_btn {  background-color: #C69B6E; margin-bottom:15px;  float: none;  height: 40px;  left: 50%;  margin-left: -57px;  text-align: center;  width: 115px;}
+.slidear_area h1 { font-size: 50px;}
+ .slidear_area h1:before {margin-left: -50px;width: 100px;}
+ .single_team {margin-bottom: 10px;}
+.single_price {margin-bottom: 100px;}
+.counter i {height: 80px;}
+.contact_form form input[type="text"] { width: 100%;}
+.social_footer {margin: 0 0 40px;}
+.footer_area p {text-align: center;}
+.tiale_head h2 {font-size: 40px;margin: 22px;}
+.single_time_line {float: left; width: 81%;}
+.middle_line {left: 84%;margin-left:4px;}
+.single_time_line_area:nth-child(2n+2) > .date_area h3 {margin-left: 0;}
+.date_area span {left: 84%;margin-left: -24px;border: 5px solid #fff;height: 20px;margin-top: 18px;width: 20px;}
+.date_area h3 {left: 84%;font-size: 24px;}
+.single_time_line_area:nth-child(2n+2) > .single_time_line {float: left;}
+.read_more_batton h3 {left: 40%;margin-bottom: -15%;}
+.single_time_line h3 {font-size: 16px;}
+.single_time_line p {font-size: 12px;}
+.time_line {margin-bottom: 50px;}
+.middle_line {height: 77%;margin-top: 27%;}
+.slidear_area p {font-size: 20px;top: 55%;}
+.downarrow i {font-size: 20px;  height: 40px;  padding-top: 8px;  width: 40px;}
+.tiale_head p {font-size: 16px;}
+.single_time_line i {font-size: 67px;margin-right: 26px;padding: 10px;}
+.single_time_line { padding: 25px;}
+.service h3 {font-size: 18px;}
+.counter {padding: 10px 0;}
+.contact_2nd i {font-size: 47px;  height: 90px;  padding-top: 10px;width: 90px;}
+.contact_2nd p {font-size: 16px;}
+
+
+}

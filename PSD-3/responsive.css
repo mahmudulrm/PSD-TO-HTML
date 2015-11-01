@@ -1,0 +1,13 @@
+/* Tablet Layout */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+. {width:750px;}
+
+}
+/* Mobile Samll Layout */
+@media only screen and (max-width: 767px) {
+
+}
+/* Mobile Large Layout */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}

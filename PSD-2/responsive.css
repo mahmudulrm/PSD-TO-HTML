@@ -1,0 +1,130 @@
+@media only screen and (min-width: 992px) and (max-width: 3000px) {
+. {width:990px;}
+
+.mobile{display:none;}
+
+}
+
+
+/* Tablet Layout */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+. {width:750px;}
+.mobile{display:none;}
+.head_nav .navbar-brand {
+  font-size: 11px;
+}
+.head_nav .form-group input[type="text"] {
+  width: 163px !important;
+}
+
+.nav.navbar-nav a {
+  font-size: 10px;
+
+}
+.main_nav.navbar-inverse .navbar-nav > li > a {
+ 
+  font-size: 18px;
+ 
+}
+.carousel-caption { padding-top: 4%;}
+.navbar-brand.logo {
+  color: #18d96e;
+  font-size: 25px;
+  padding-top: 33px;
+  transform: rotate(-20deg);
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  margin-left: 15px;
+}
+
+
+}
+
+
+/* Mobile Samll Layout */
+@media only screen and (max-width: 767px) {
+.nav.sign.navbar-nav.navbar-right {
+  display: inline-flex;}
+  .nav.sign.navbar-nav img {
+  height: 13px;
+  margin: 12px 5px 0;
+  width: 20px;
+
+}
+.nav.navbar-nav a {
+  font-size: 15px;
+  padding: 8px;
+}
+
+.carousel-caption p.p1 {
+  font-size: 10px;
+}
+.carousel-caption p.p2 {
+  font-size: 7px;
+}
+h1.ha1 {
+  font-size: 12px;
+
+}
+.carousel-caption {
+  padding-top: 0;
+}
+.btn {
+  border-radius: 0 !important;
+  font-size: 9px;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-left: 1px;
+  margin-top: 0;
+  padding: 6px 15px;
+}
+.menu{display:none;}
+}
+/* Mobile Large Layout */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.nav.navbar-nav a {
+  font-size: 15px;
+  padding: 8px;
+}
+.nav.sign.navbar-nav.navbar-right {
+  display: inline-flex;
+}
+.nav.sign.navbar-nav img {
+  height: 13px;
+  margin: 12px 5px 0;
+  width: 20px;
+}
+.carousel-caption p.p1 {
+  font-size: 10px;
+}
+.carousel-caption p.p2 {
+  font-size: 7px;
+}
+h1.ha1 {
+  font-size: 12px;
+
+}
+.btn {
+  border-radius: 0 !important;
+  font-size: 9px;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-left: 1px;
+  margin-top: 0;
+  padding: 6px 15px;
+}
+.carousel-caption {
+  padding-top: 31px;
+}
+
+.carousel-caption p.p3 {
+  color: #efefef;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu{display:none;}
+}
